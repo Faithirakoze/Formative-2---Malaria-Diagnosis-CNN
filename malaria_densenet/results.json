@@ -1,0 +1,172 @@
+[
+  {
+    "run_name": "densenet_exp_01_frozen_baseline",
+    "label": "frozen_baseline",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [],
+    "dropout": 0.0,
+    "lr": 0.001,
+    "accuracy": 0.940856313497823,
+    "precision": 0.9618677042801557,
+    "recall_sensitivity": 0.9155555555555556,
+    "specificity": 0.965149359886202,
+    "f1": 0.9381404174573055,
+    "roc_auc": 0.985308466361098
+  },
+  {
+    "run_name": "densenet_exp_02_augmentation",
+    "label": "augmentation",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": true,
+    "unfreeze_prefixes": [],
+    "dropout": 0.0,
+    "lr": 0.001,
+    "accuracy": 0.9252539912917271,
+    "precision": 0.9321511179645335,
+    "recall_sensitivity": 0.9110776186887717,
+    "specificity": 0.9384184744576627,
+    "f1": 0.9214939024390244,
+    "roc_auc": 0.9765720622923899
+  },
+  {
+    "run_name": "densenet_exp_03_unfreeze_last_block",
+    "label": "unfreeze_last_block",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [
+      "conv5"
+    ],
+    "dropout": 0.0,
+    "lr": 0.0001,
+    "accuracy": 0.9691582002902758,
+    "precision": 0.9733135656041513,
+    "recall_sensitivity": 0.9640234948604993,
+    "specificity": 0.9741750358680057,
+    "f1": 0.9686462559940981,
+    "roc_auc": 0.995530456729807
+  },
+  {
+    "run_name": "densenet_exp_04_unfreeze_dropout",
+    "label": "unfreeze_dropout",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [
+      "conv5"
+    ],
+    "dropout": 0.3,
+    "lr": 0.0001,
+    "accuracy": 0.9677068214804064,
+    "precision": 0.9760119940029985,
+    "recall_sensitivity": 0.9580573951434879,
+    "specificity": 0.9770937723693629,
+    "f1": 0.966951355365763,
+    "roc_auc": 0.9946139709658508
+  },
+  {
+    "run_name": "densenet_exp_05_unfreeze_conv4_conv5",
+    "label": "unfreeze_conv4_conv5",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [
+      "conv4",
+      "conv5"
+    ],
+    "dropout": 0.0,
+    "lr": 0.0001,
+    "accuracy": 0.9677068214804064,
+    "precision": 0.9781626506024096,
+    "recall_sensitivity": 0.9558498896247241,
+    "specificity": 0.9792412312097352,
+    "f1": 0.9668775586155564,
+    "roc_auc": 0.9955217819325864
+  },
+  {
+    "run_name": "densenet_exp_06_unfreeze_augmentation",
+    "label": "unfreeze_augmentation",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": true,
+    "unfreeze_prefixes": [
+      "conv5"
+    ],
+    "dropout": 0.0,
+    "lr": 0.0001,
+    "accuracy": 0.9698838896952104,
+    "precision": 0.975482912332838,
+    "recall_sensitivity": 0.9633162142333089,
+    "specificity": 0.9763101220387652,
+    "f1": 0.9693613879660391,
+    "roc_auc": 0.995182389254732
+  },
+  {
+    "run_name": "densenet_exp_07_unfreeze_sgd_momentum",
+    "label": "unfreeze_sgd_momentum",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [
+      "conv5"
+    ],
+    "dropout": 0.0,
+    "lr": 0.001,
+    "optimizer": "sgd_momentum",
+    "accuracy": 0.9680696661828737,
+    "precision": 0.9751131221719457,
+    "recall_sensitivity": 0.9591988130563798,
+    "specificity": 0.9765625,
+    "f1": 0.9670905011219147,
+    "roc_auc": 0.993474128338279
+  },
+  {
+    "run_name": "densenet_exp_08_unfreeze_batch64",
+    "label": "unfreeze_batch64",
+    "is_repeat": false,
+    "notes": "",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [
+      "conv5"
+    ],
+    "dropout": 0.0,
+    "lr": 0.0001,
+    "batch_size": 64,
+    "accuracy": 0.9648040638606676,
+    "precision": 0.9829325058184639,
+    "recall_sensitivity": 0.944113263785395,
+    "specificity": 0.9844413012729845,
+    "f1": 0.9631318890155834,
+    "roc_auc": 0.9947090727808144
+  },
+  {
+    "run_name": "densenet_exp_10_unfreeze_last_block_v2",
+    "label": "unfreeze_last_block_v2",
+    "is_repeat": false,
+    "notes": "Retrain of exp_03 under the corrected, stable train/val/test split (fixed a tf.data reshuffle-on-iteration bug in the original split).",
+    "patience": 3,
+    "augment": false,
+    "unfreeze_prefixes": [
+      "conv5"
+    ],
+    "dropout": 0.0,
+    "lr": 0.0001,
+    "accuracy": 0.9676950998185118,
+    "precision": 0.9655688622754491,
+    "recall_sensitivity": 0.967741935483871,
+    "specificity": 0.9676511954992968,
+    "f1": 0.9666541775946047,
+    "roc_auc": 0.9940327908981464
+  }
+]
