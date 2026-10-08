@@ -1,0 +1,6 @@
+cell_images/
+cell_images.zip
+# Kaggle results: keep only the TensorBoard logs in git
+malaria-diagnosis/*
+!malaria-diagnosis/logs/
+Copy_Bode_Malaria_Diagnosis_CNN_Group6_EvenNumber.ipynb
