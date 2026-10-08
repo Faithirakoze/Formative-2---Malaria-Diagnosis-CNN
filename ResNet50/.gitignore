@@ -1,0 +1,4 @@
+cell_images/
+cell_images.zip
+malaria-diagnosis/*
+!malaria-diagnosis/logs/
