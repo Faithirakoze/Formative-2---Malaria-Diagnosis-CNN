@@ -1,0 +1,8 @@
+run,config,accuracy,precision,sensitivity,specificity,f1,auc,val_loss
+plain_cnn_exp_01_baseline,"1 conv/block, no BN, Flatten head",0.9565,0.9474,0.9666,0.9463,0.9569,0.9918,0.1188
+plain_cnn_exp_02_batchnorm,+ BatchNorm,0.959,0.9788,0.9383,0.9797,0.9581,0.9904,0.1192
+plain_cnn_exp_03_augmentation,"+ flips, ±36° rotation (train only)",0.9637,0.9699,0.9572,0.9702,0.9635,0.9929,0.1023
+plain_cnn_exp_04_dropout,exp 03 + Dropout 0.5,0.9619,0.9818,0.9412,0.9826,0.9611,0.9929,0.1077
+plain_cnn_exp_05_lr_3e-4,"exp 03, lr 3e-4",0.9615,0.9697,0.9528,0.9702,0.9612,0.9924,0.1069
+plain_cnn_exp_06_gap_head,"exp 03, GAP head",0.9565,0.9708,0.9412,0.9717,0.9558,0.9913,0.1248
+plain_cnn_exp_07_two_convs_per_block,"exp 03, 2 convs/block",0.9666,0.9639,0.9695,0.9637,0.9667,0.9938,0.0955
