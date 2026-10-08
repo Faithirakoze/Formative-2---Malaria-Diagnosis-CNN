@@ -1,0 +1,18 @@
+# Dataset
+cell_images/
+cell_images.zip
+*.zip
+
+# Trained models
+saved_models/
+*.keras
+*.h5
+
+# TensorBoard logs (shared via Drive link per the brief)
+logs/
+
+# Clutter
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+Thumbs.db
